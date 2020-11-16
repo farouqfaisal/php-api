@@ -14,5 +14,4 @@ if (count($data) > 0) {
 }else {
   echo json_encode('data not found!');
 }
-
 ?>
