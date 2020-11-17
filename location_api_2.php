@@ -8,8 +8,10 @@ $data = mysqli_fetch_array($query);
 if (count($data) > 0) {
   $return['latitude'] = $data['latitude'];
   $return['longitude'] = $data['longitude'];
+  $return['message'] = 'success';
   echo json_encode($return);
 }else {
-  echo json_encode('data not found!');
+  $return['message'] = 'data not found';
+  echo json_encode($return);
 }
 ?>
